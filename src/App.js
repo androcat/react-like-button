@@ -1,8 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  return <button>I'm a button</button>;
+  const [counter, setCounter] = useState(0);
+  console.log(counter);
+  const addLike = () => {
+    setCounter(counter + 1);
+  };
+  let like = "asdfg";
+  if (counter === 1) {
+    like = "like";
+  } else {
+    like = "likes";
+  }
+
+  return (
+    <button onClick={addLike}>
+      {counter} {like}
+    </button>
+  );
 }
 
 export default App;
