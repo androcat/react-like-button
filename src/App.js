@@ -3,7 +3,6 @@ import { useState } from "react";
 
 function App() {
   const [counter, setCounter] = useState(0);
-  console.log(counter);
   const addLike = () => {
     setCounter(counter + 1);
   };
